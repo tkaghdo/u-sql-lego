@@ -1,0 +1,61 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a2059054-8c1c-49eb-bc3d-2d9bb17d7115</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>Algebra.xml</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Name>USQLLego</Name>
+    <RootNamespace>USQLLego</RootNamespace>
+    <RuntimeVersion>default</RuntimeVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="scripts\TransformThemesFile.usql" />
+    <Script Include="scripts\TransformSetsFile.usql" />
+    <Script Include="scripts\TransformPartsFile.usql" />
+    <Script Include="scripts\TransformPartsCategoriesFile.usql" />
+    <Script Include="scripts\TransformInventorySetsFile.usql" />
+    <Script Include="scripts\TransformInventoryPartsFile.usql" />
+    <Script Include="scripts\TransformInventoriesFile.usql" />
+    <Script Include="scripts\TransformColorsFile.usql" />
+    <ScriptCode Include="scripts\TransformThemesFile.usql.cs">
+      <DependentUpon>scripts\TransformThemesFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformSetsFile.usql.cs">
+      <DependentUpon>scripts\TransformSetsFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformPartsFile.usql.cs">
+      <DependentUpon>scripts\TransformPartsFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformPartsCategoriesFile.usql.cs">
+      <DependentUpon>scripts\TransformPartsCategoriesFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformInventorySetsFile.usql.cs">
+      <DependentUpon>scripts\TransformInventorySetsFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformInventoryPartsFile.usql.cs">
+      <DependentUpon>scripts\TransformInventoryPartsFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformInventoriesFile.usql.cs">
+      <DependentUpon>scripts\TransformInventoriesFile.usql</DependentUpon>
+    </ScriptCode>
+    <ScriptCode Include="scripts\TransformColorsFile.usql.cs">
+      <DependentUpon>scripts\TransformColorsFile.usql</DependentUpon>
+    </ScriptCode>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="input_data" />
+    <Folder Include="scripts" />
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataLake\MsBuild\1.0\Usql.targets" />
+</Project>

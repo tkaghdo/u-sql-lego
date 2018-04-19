@@ -1,0 +1,23 @@
+﻿{
+"CompilerPlanStart":"4\/17\/2018 12:07:19 PM"
+},
+{
+"Settings":"-c++ -mp -pdb Partial -OUTPUT_PATH C:\\Workspace\\Data lake\\USQLLego\\USQLLego -cosmosCluster localhost -apEnvironment Default -apCluster localhost -Off ForceShadowCopy -On ADL -Off Sirius -On SQLIP -Off SQLIPSQLProxy -Off SQLIPSQLProxyNative -buckets 1 -SplitPartitionThreshold 52428800 -ClientVersion 10.2.2.0"
+}{
+"    EXTRACT COLOR_ID int,            COLOR_NAME string,            COLOR_RGB string,        ":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"     SELECT COLOR_ID,           COLOR_NAME.ToUpper() AS  COLOR_NAME,           COLOR_RGB,   ":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"OUTPUT @colors_output     TO \"\/output_data\/colors_output.csv\"    USING Outputters.Csv(output":
+{
+"NodeName":"OutputStatement"
+}},
+{
+"CompilerPlanEnd":"4\/17\/2018 12:07:19 PM"
+}

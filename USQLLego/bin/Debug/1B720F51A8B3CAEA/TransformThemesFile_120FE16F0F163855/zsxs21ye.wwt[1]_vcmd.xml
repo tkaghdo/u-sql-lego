@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vertexCommand command="Start" jobType="None" managedMemorySize="322961408" vertexArg="ScopeEngine.dll -scopeVertex SV1_Extract -vertexNumber 0">
+  <inputs>
+    <input name="" path="C:\Workspace\Data lake\USQLLego\USQLLego\input_data\themes.csv" blockAligned="True" globalStartOffset="0" localStartOffset="0" localEndOffset="11341" length="11341" />
+  </inputs>
+  <outputs>
+    <output path="C:\Workspace\Data lake\USQLLego\USQLLego\bin\Debug\1B720F51A8B3CAEA\_Temp\TransformThemesFile_120FE16F0F163855\scopetmpfile._SV1_Extract_out0" isFirstOutputPiece="True" />
+  </outputs>
+</vertexCommand>

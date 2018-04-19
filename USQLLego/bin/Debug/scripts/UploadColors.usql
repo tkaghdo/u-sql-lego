@@ -1,0 +1,28 @@
+// Auto-generated header code
+
+// Auto-generated header code ended
+
+// User script
+@colors_input =
+    EXTRACT COLOR_ID int,
+            COLOR_NAME string,
+            COLOR_RGB string,
+            IS_TRANSPARENT string
+    FROM "/input_data/colors.csv"
+    USING Extractors.Csv(skipFirstNRows:1);
+
+@colors_output = 
+    SELECT COLOR_ID,
+           COLOR_NAME.ToUpper() AS  COLOR_NAME,
+           COLOR_RGB,
+           IS_TRANSPARENT.ToUpper() == "T" ? "Y" : "N" AS IS_TRANSPARENT
+    FROM @colors_input;
+
+OUTPUT @colors_output 
+    TO "/output_data/colors_output.csv"
+    USING Outputters.Csv(outputHeader:true);
+// User script ended
+// Auto-generated footer code
+
+// Auto-generated footer code ended
+

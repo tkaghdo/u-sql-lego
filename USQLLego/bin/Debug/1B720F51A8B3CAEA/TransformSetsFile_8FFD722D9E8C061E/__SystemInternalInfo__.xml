@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CSSRelatedInfo>
+  <ScopeCounters>
+    <Counter Name="ResourcesDownloading" Value="0" Unit="second" Intervals="0" />
+    <Counter Name="Overall" Value="2.2053463" Unit="second" Intervals="0" />
+    <Counter Name="FrontEndRun" Value="2.1777998" Unit="second" Intervals="0" />
+    <Counter Name="AstBuilder" Value="2.0037649" Unit="second" Intervals="1" />
+    <Counter Name="SyntaxVerifier" Value="0.1570872" Unit="second" Intervals="1" />
+    <Counter Name="DdlResolver" Value="1.6295853" Unit="second" Intervals="1" />
+    <Counter Name="RoslynStartup" Value="0.4307093" Unit="second" Intervals="2" />
+    <Counter Name="SMS" Value="0.0531142" Unit="second" Intervals="2" />
+    <Counter Name="ConstantFolding" Value="0.9002529" Unit="second" Intervals="2" />
+    <Counter Name="ResourceReferencePass" Value="0.0040751" Unit="second" Intervals="1" />
+    <Counter Name="InputOutputPass" Value="0.0457596" Unit="second" Intervals="0" />
+    <Counter Name="Table Files Read" Value="0" Unit="count" />
+  </ScopeCounters>
+</CSSRelatedInfo>

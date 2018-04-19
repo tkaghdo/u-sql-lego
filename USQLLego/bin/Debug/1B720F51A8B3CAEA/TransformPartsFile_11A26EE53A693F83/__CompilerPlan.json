@@ -1,0 +1,73 @@
+﻿{
+"CompilerPlanStart":"4\/18\/2018 10:07:46 AM"
+},
+{
+"Settings":"-c++ -mp -pdb Partial -OUTPUT_PATH C:\\Workspace\\Data lake\\USQLLego\\USQLLego -cosmosCluster localhost -apEnvironment Default -apCluster localhost -Off ForceShadowCopy -On ADL -Off Sirius -On SQLIP -Off SQLIPSQLProxy -Off SQLIPSQLProxyNative -buckets 1 -SplitPartitionThreshold 52428800 -ClientVersion 10.2.2.0"
+}{
+"\/\/ Auto-generated header code\/\/ Auto-generated header code ended\/\/ User scriptDECLARE @inp":
+{
+"NodeName":"DeclareVariableStatement"
+}{
+"Name":"@input_file_location"
+}},
+{
+"DECLARE @output_file_location string = \"\/output_data\/parts_output.csv\"":
+{
+"NodeName":"DeclareVariableStatement"
+}{
+"Name":"@output_file_location"
+}},
+{
+"    EXTRACT PART_NUMBER string,            PART_NAME string,            CATEGORY_ID int    F":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"     SELECT PART_NUMBER,           PART_NAME.ToUpper() AS  PART_NAME,           CATEGORY_ID ":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"OUTPUT @parts_output     TO @output_file_location    USING Outputters.Csv(outputHeader:true)":
+{
+"NodeName":"OutputStatement"
+}},
+{
+"CompilerPlanEnd":"4\/18\/2018 10:07:46 AM"
+}{
+"CompilerPlanStart":"4\/18\/2018 10:41:49 AM"
+},
+{
+"Settings":"-c++ -mp -pdb Partial -OUTPUT_PATH C:\\Workspace\\Data lake\\USQLLego\\USQLLego -cosmosCluster localhost -apEnvironment Default -apCluster localhost -Off ForceShadowCopy -On ADL -On SQLIP -Off SQLIPSQLProxy -Off SQLIPSQLProxyNative -SplitPartitionThreshold 52428800 -ClientVersion 10.2.2.0"
+}{
+"\/\/ Auto-generated header code\/\/ Auto-generated header code ended\/\/ User scriptDECLARE @inp":
+{
+"NodeName":"DeclareVariableStatement"
+}{
+"Name":"@input_file_location"
+}},
+{
+"DECLARE @output_file_location string = \"\/output_data\/parts_output.csv\"":
+{
+"NodeName":"DeclareVariableStatement"
+}{
+"Name":"@output_file_location"
+}},
+{
+"    EXTRACT PART_NUMBER string,            PART_NAME string,            CATEGORY_ID int    F":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"     SELECT PART_NUMBER,           PART_NAME.ToUpper() AS  PART_NAME,           CATEGORY_ID ":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"OUTPUT @parts_output     TO @output_file_location    USING Outputters.Csv(outputHeader:true)":
+{
+"NodeName":"OutputStatement"
+}},
+{
+"CompilerPlanEnd":"4\/18\/2018 10:41:49 AM"
+}

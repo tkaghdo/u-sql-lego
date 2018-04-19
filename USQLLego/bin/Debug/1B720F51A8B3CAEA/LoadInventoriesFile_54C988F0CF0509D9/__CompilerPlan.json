@@ -1,0 +1,37 @@
+﻿{
+"CompilerPlanStart":"4\/17\/2018 4:24:01 PM"
+},
+{
+"Settings":"-c++ -mp -pdb Partial -OUTPUT_PATH C:\\Workspace\\Data lake\\USQLLego\\USQLLego -cosmosCluster localhost -apEnvironment Default -apCluster localhost -Off ForceShadowCopy -On ADL -Off Sirius -On SQLIP -Off SQLIPSQLProxy -Off SQLIPSQLProxyNative -buckets 1 -SplitPartitionThreshold 52428800 -ClientVersion 10.2.2.0"
+}{
+"\/\/ Auto-generated header code\/\/ Auto-generated header code ended\/\/ User script\/\/DECLARE @i":
+{
+"NodeName":"DeclareVariableStatement"
+}{
+"Name":"@input_file_location"
+}},
+{
+"DECLARE @output_file_location string = \"\/output_data\/inventories_output.csv\"":
+{
+"NodeName":"DeclareVariableStatement"
+}{
+"Name":"@output_file_location"
+}},
+{
+"    EXTRACT INVENTORY_ID int,            INVENTORY_VERSION int,            SET_NUMBER string":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"     SELECT INVENTORY_ID,            INVENTORY_VERSION,            SET_NUMBER.IndexOf(\"-\") >= ":
+{
+"NodeName":"QueryStatement"
+}},
+{
+"OUTPUT @inventories_output     TO @output_file_location    USING Outputters.Csv(outputHeader":
+{
+"NodeName":"OutputStatement"
+}},
+{
+"CompilerPlanEnd":"4\/17\/2018 4:24:01 PM"
+}

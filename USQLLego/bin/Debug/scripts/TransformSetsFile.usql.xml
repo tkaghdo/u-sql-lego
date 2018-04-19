@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><CompileResult scriptPath="C:\Workspace\Data lake\USQLLego\USQLLego\scripts\TransformSetsFile.usql"><Error><Start>428</Start><End>448</End><Message>E_STORE_USER_FILENOTFOUND: File not found or access denied: wasb://lego@tambykaghdostorage1/input/sets.csv.
+Description:
+Unable to obtain information about this file.
+Resolution:
+Ensure the file with exact casing exists (paths are case-sensitive) and the account has read permission to the file.... at token '@input_file_location', line 15
+near the ###:
+**************
+  EXTRACT SET_NUMBER string,
+            SET_NAME string,
+            SET_YEAR int,
+            SET_THEME string,
+            NUMBER_OF_PARTS int
+    FROM  ### @input_file_location
+    USING Extractors.Csv(skipFirstNRows:1);
+
+@sets_output = 
+    SELECT SET_NUMBER.IndexOf("-") &gt;= 0 ? SET_NUMBER.Substring(0,SET_NUMBE</Message></Error></CompileResult>

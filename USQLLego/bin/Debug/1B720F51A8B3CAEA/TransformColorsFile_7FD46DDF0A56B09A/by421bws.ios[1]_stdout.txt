@@ -1,0 +1,46 @@
+LocaVertexHost Runtime engine initialized
+Wed Apr 18 09:42:02 2018: enter native vertex execution
+Process private memory usage: 9113600
+Wed Apr 18 09:42:02 2018: ScopeEngine reset done in 0msec
+Wed Apr 18 09:42:02 2018: IO registration done in 3msec
+StreamCacheClientProxyManager: ConnectToStreamCacheServer WaitNamedPipe failed with error: 2.
+CLR started, version: v4.0.30319, memory limit: 322961408
+Wed Apr 18 09:42:02 2018: CLR check done in 25msec
+Wed Apr 18 09:42:02 2018: InitManaged done in 54msec
+Wed Apr 18 09:42:02 2018: InitNative done in 0msec
+Input Stream Count = 1, Input Buffer Size = 4194304, Input Buffer Count = 2
+Output Stream Count = 1, Output Buffer Size = 4194304, Output Buffer Count = 6
+Wed Apr 18 09:42:02 2018: Vertex Execution done in 348msec
+Wed Apr 18 09:42:02 2018: ShutdownNative skipped done in 0msec
+Wed Apr 18 09:42:02 2018: ShutdownManaged done in 2msec
+SV1_Extract: vertexGuid=FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF, vertexStart=Wed Apr 18 09:42:02 2018, avgExecutionMemoryPeakSize=8650752, avgGlobalMemoryPeakSize=0, avgHashMemoryPeakSize=0, avgIOMemoryPeakSize=33554432, avgOverallMemoryPeakSize=42205184, avgOverallReservedPeakSize=58720256, avgPrivateMemoryPeakSize=73007104, avgSortMemoryPeakSize=0, avgWorkingSetPeakSize=34443264, maxExecutionMemoryPeakSize=8650752, maxGlobalMemoryPeakSize=0, maxHashMemoryPeakSize=0, maxIOMemoryPeakSize=33554432, maxOverallMemoryPeakSize=42205184, maxOverallReservedPeakSize=58720256, maxPrivateMemoryPeakSize=73007104, maxSortMemoryPeakSize=0, maxWorkingSetPeakSize=34443264,
+	ManagedMemory: avgGen0CollectionsCount=0, avgGen1CollectionsCount=0, avgGen2CollectionsCount=0, avgGen2HeapSize=0, avgInducedGCCount=0, avgLargeObjectHeapSize=0, avgManagedMemoryPeakSize=129408, avgTimeInGCPercent=0, avgTimeInGCPercentHost=0, maxGen0CollectionsCount=0, maxGen1CollectionsCount=0, maxGen2CollectionsCount=0, maxGen2HeapSize=0, maxInducedGCCount=0, maxLargeObjectHeapSize=0, maxManagedMemoryPeakSize=129408, maxTimeInGCPercent=0, maxTimeInGCPercentHost=0,
+	Output: IoStreamInclusiveTime=0, OperatorWaitOnIOTime=0, avgIoTime=0, bytes=1369, closeTime=0, exclusiveTime=0, inclusiveTime=234, maxIoTime=0, maxIoTimeSize=0, maxRowCount=57, minIoTime=0, minIoTimeSize=1369, opId=5, openTime=0, operations=1, rowCount=57, totalIoTime=0, totalThrottlingTime=0, totalWaitTime=0,
+		IOBuffers: avgBufferMemory=25165824, maxBufferCount=6, maxBufferMemory=25165824, maxBufferSize=4194304,
+		ScopeProcess: exclusiveTime=234, inclusiveTime=234, maxRowCount=57, opId=3, rowCount=57,
+			SqlIpProcessor: userCode=1,
+				Allocator_SqlIpProcessor: avgBinarySize=0, avgCommittedSize=131072, avgReservedSize=4194304, avgRowDataSize=68, avgStringSize=44, maxBinarySize=0, maxCommitCount=1, maxCommittedSize=131072, maxFixedRowDataSize=24, maxReservedSize=4194304, maxResetCount=58, maxRowDataSize=68, maxStringSize=44,
+				SqlIpInputRowset:
+					ParallelUnionAll: avgInputCount=1, exclusiveTime=0, inclusiveTime=0, maxInputCount=1, maxRowCount=57, opId=6, rowCount=57,
+						Extractor: IoStreamInclusiveTime=0, OperatorWaitOnIOTime=0, avgIoTime=0, bytes=2394, closeTime=0, exclusiveTime=0, inclusiveTime=0, maxIoTime=0, maxIoTimeSize=0, maxRowCount=57, minIoTime=0, minIoTimeSize=1197, opId=1, openTime=0, operations=2, rowCount=57, totalIoTime=0, totalThrottlingTime=0, totalWaitTime=0,
+							Allocator_TextEncodingReader: avgBinarySize=0, avgCommittedSize=8388608, avgReservedSize=16777216, avgStringSize=0, maxBinarySize=0, maxCommitCount=1, maxCommittedSize=8388608, maxReservedSize=16777216, maxResetCount=1, maxStringSize=0,
+							IOBuffers: avgBufferMemory=8388608, maxBufferCount=2, maxBufferMemory=8388608, maxBufferSize=4194304,
+							Allocator_Extractor: avgBinarySize=0, avgCommittedSize=131072, avgReservedSize=4194304, avgRowDataSize=72, avgStringSize=45, maxBinarySize=0, maxCommitCount=1, maxCommittedSize=131072, maxFixedRowDataSize=24, maxReservedSize=4194304, maxResetCount=117, maxRowDataSize=72, maxStringSize=45,
+Overall memory usage statistics
+	Allocations = 74
+	Deallocations = 74
+	Outstanding size = 0
+	Outstanding reservations = 0
+IO memory usage statistics
+	Allocations = 8
+	Deallocations = 8
+	Outstanding size = 0
+	Outstanding reservations = 0
+Execution memory usage statistics
+	Allocations = 66
+	Deallocations = 66
+	Outstanding size = 0
+	Outstanding reservations = 0
+Wed Apr 18 09:42:02 2018: Stats dump done in 3msec
+Wed Apr 18 09:42:02 2018: finished executing successfully in 0.354sec
+LocaVertexHost Execution finished in    0.50 sec

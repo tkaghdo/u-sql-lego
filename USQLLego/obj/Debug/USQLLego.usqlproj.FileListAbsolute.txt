@@ -1,0 +1,4 @@
+C:\Workspace\Data lake\USQLLego\USQLLego\obj\Debug\USQLLego.usqlproj.CoreCompileInputs.cache
+C:\Workspace\Data lake\USQLLego\USQLLego\bin\Debug\Algebra.xml
+C:\Workspace\Data lake\USQLLego\USQLLego\obj\Debug\Algebra.xml
+C:\Workspace\Data lake\USQLLego\USQLLego\obj\Debug\USQLLego.usqlprojResolveAssemblyReference.cache

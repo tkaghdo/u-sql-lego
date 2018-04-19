@@ -1,0 +1,24 @@
+﻿DECLARE @input_file_location string = "/input_data/sets.csv";
+DECLARE @output_file_location string = "/output_data/sets_output.csv";
+
+@sets_input =
+    EXTRACT SET_NUMBER string,
+            SET_NAME string,
+            SET_YEAR int,
+            SET_THEME string,
+            NUMBER_OF_PARTS int
+    FROM @input_file_location
+    USING Extractors.Csv(skipFirstNRows:1);
+
+@sets_output = 
+    SELECT SET_NUMBER.IndexOf("-") >= 0 ? SET_NUMBER.Substring(0,SET_NUMBER.IndexOf("-")) : SET_NUMBER  AS SET_PREFIX,
+           SET_NUMBER.IndexOf("-") >= 0 ? SET_NUMBER.Substring(SET_NUMBER.IndexOf("-") + 1) : NULL AS SET_POSTFIX,
+           SET_NAME.ToUpper() AS SET_NAME,
+           SET_YEAR,
+           SET_THEME,
+           NUMBER_OF_PARTS
+    FROM @sets_input;
+
+OUTPUT @sets_output 
+    TO @output_file_location
+    USING Outputters.Csv(outputHeader:true);

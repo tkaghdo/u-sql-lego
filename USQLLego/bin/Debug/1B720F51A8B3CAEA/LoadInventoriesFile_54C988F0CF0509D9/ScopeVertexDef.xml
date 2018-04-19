@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScopeVertices helperAssembly="__ScopeCodeGen__.dll" signatureVersion="1">
+  <ScopeVertex id="SV1_Extract" cppReady="true">
+    <operator id="Extract_0" uid="1" assemblyName="Microsoft.Analytics.Interfaces.dll" className="Microsoft.Analytics.Interfaces.IExtractor">
+      <input id="Extract_0" uid="1" schema="INVENTORY_ID:int,INVENTORY_VERSION:int,SET_NUMBER:string" inputIndex="0" numberOfInputs="ALL" />
+      <output id="Extract_0_Data0" uid="2" schema="INVENTORY_ID:int,INVENTORY_VERSION:int,SET_NUMBER:string" />
+    </operator>
+    <operator id="Process_1" uid="3" assemblyName="__ScopeCodeGen__.dll" className="SqlFilterTransformer_3">
+      <input id="Extract_0_Data0" uid="2" schema="INVENTORY_ID:int,INVENTORY_VERSION:int,SET_NUMBER:string" />
+      <output id="Process_1_Data0" uid="4" schema="INVENTORY_ID:int,INVENTORY_VERSION:int,SET_PREFIX:string,SET_POSTFIX:string" />
+    </operator>
+    <operator id="Output_2" uid="5" assemblyName="Microsoft.Analytics.Interfaces.dll" className="Microsoft.Analytics.Interfaces.IOutputter">
+      <input id="Process_1_Data0" uid="4" schema="INVENTORY_ID:int,INVENTORY_VERSION:int,SET_PREFIX:string,SET_POSTFIX:string" />
+      <output id="SV1_Extract_out0" uid="5" schema="INVENTORY_ID:int,INVENTORY_VERSION:int,SET_PREFIX:string,SET_POSTFIX:string" outputIndex="0" numberOfOutputs="1" finalOutput="true" />
+    </operator>
+  </ScopeVertex>
+</ScopeVertices>

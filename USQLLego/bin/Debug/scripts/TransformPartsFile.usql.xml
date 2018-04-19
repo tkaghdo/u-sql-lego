@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><CompileResult scriptPath="C:\Workspace\Data lake\USQLLego\USQLLego\scripts\TransformPartsFile.usql"><Error><Start>371</Start><End>391</End><Message>E_STORE_USER_FILENOTFOUND: File not found or access denied: wasb://lego@tambykaghdostorage1/input/parts.csv.
+Description:
+Unable to obtain information about this file.
+Resolution:
+Ensure the file with exact casing exists (paths are case-sensitive) and the account has read permission to the file.... at token '@input_file_location', line 13
+near the ###:
+**************
+ing = "/output_data/parts_output.csv";
+
+@parts_input =
+    EXTRACT PART_NUMBER string,
+            PART_NAME string,
+            CATEGORY_ID int
+    FROM  ### @input_file_location
+    USING Extractors.Csv(skipFirstNRows:1);
+
+@parts_output = 
+    SELECT PART_NUMBER,
+           PART_NAME.ToUpper() AS  PART_NAME,
+ </Message></Error></CompileResult>
